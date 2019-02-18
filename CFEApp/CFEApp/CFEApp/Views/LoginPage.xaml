@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:renderer="clr-namespace:CFEApp"
+             x:Class="CFEApp.LoginPage"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <ScrollView
+            VerticalOptions="CenterAndExpand">
+            <StackLayout
+                VerticalOptions="CenterAndExpand"
+                Margin="30,30">
+                <Image
+                    Source="logoCFE.png"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"/>
+                <Frame
+                    BackgroundColor="#EDEDED"
+                    HasShadow="False"
+                    CornerRadius="8"
+                    Margin="0"
+                    Padding="20,30">
+                    <StackLayout
+                        Spacing="15">
+                        <renderer:CustomEntry
+                            CornerRadius="5"
+                            BorderColor="#0C905F"
+                            BorderWidth="2"
+                            Placeholder="RPE"
+                            Text="{Binding RPEUserName}"
+                            TextColor="Black"
+                            PlaceholderColor="Gray"/>
+                        <renderer:CustomEntry
+                            CornerRadius="5"
+                            BorderColor="#0C905F"
+                            BorderWidth="2"
+                            Placeholder="Contraseña"
+                            Text="{Binding Password}"
+                            TextColor="Black"
+                            IsPassword="True"
+                            PlaceholderColor="Gray"/>
+                        <Button
+                            IsEnabled="{Binding IsEnabled}"
+                            BackgroundColor="#00A062"
+                            TextColor="White"
+                            Text="Iniciar"
+                            BorderRadius="5"
+                            Command="{Binding LoginCommand}"/>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
