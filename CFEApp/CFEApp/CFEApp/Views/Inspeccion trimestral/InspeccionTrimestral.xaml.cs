@@ -15,7 +15,15 @@ namespace CFEApp
 		public InspeccionTrimestral ()
 		{
 			InitializeComponent ();
-		}
+            ToolbarItem itemStudy = new ToolbarItem
+            {
+                Icon = "sara.png",
+                Text = "Finalizar",
+                Order = ToolbarItemOrder.Primary,
+                Command = new Command(() => Navigation.PushAsync(new UI_ObservacionesAdicionales()))
+            };
+            ToolbarItems.Add(itemStudy);
+        }
         protected override void OnAppearing()
         {
             base.OnAppearing();
@@ -37,7 +45,7 @@ namespace CFEApp
             string Codigo = Convert.ToString(obj.Codigo);
             string NombreH = Convert.ToString(obj.Descripcion);
 
-            //App.MasterDetail.Detail.Navigation.PushAsync(new UI_DetalleHerramienta(UsuarioID, InventarioID, MInventarioEstadoID, CantidadEx, Codigo, NombreH));
+            App.MasterDetail.Detail.Navigation.PushAsync(new UI_DetalleHerramienta(UsuarioID, InventarioID, MInventarioEstadoID, CantidadEx, Codigo, NombreH));
         }
     }
 }

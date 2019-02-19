@@ -15,6 +15,7 @@ namespace CFEApp
 		public OffLineApp ()
 		{
 			InitializeComponent ();
+            BindingContext = new MainOfflineViewModel();
 		}
 	}
 }

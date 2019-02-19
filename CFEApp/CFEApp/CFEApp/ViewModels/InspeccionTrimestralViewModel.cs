@@ -8,10 +8,11 @@ using System.Net;
 using System.IO;
 using System.ComponentModel;
 using System.Collections.ObjectModel;
+using ReactiveUI;
 
 namespace CFEApp
 {
-    public class InspeccionTrimestralViewModel : INotifyPropertyChanged
+    public class InspeccionTrimestralViewModel : ReactiveObject, INotifyPropertyChanged
     {
         public static string IdClasificacion = "";
         public string CodigoHerramienta { get; set; }
@@ -22,6 +23,8 @@ namespace CFEApp
         public String ObservacionesHerramienta { get; set; }
         public int FaltanteHerramienta { get; set; }
         public String ObservacionesFaltante { get; set; }
+        //-----------------------------------------------------
+        ServiceHerramientaDB _DbHerramientas;
         //-----------------------------------------------------
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -45,9 +48,15 @@ namespace CFEApp
 
         public InspeccionTrimestralViewModel()
         {
+            //-----------------------------
+            _DbHerramientas = new ServiceHerramientaDB();
+            //-----------------------------
             CardDataCollection = new List<M_EquipoHerramienta>();
             CardDataCollectionEqPrueba = new List<M_EquipoHerramienta>();
             CardDataCollectionHmenor = new List<M_EquipoHerramienta>();
+            CardDataCollectionHmayor = new List<M_EquipoHerramienta>();
+            CardDataCollectionLineaSViva = new List<M_EquipoHerramienta>();
+            CardDataCollectionEqSeg = new List<M_EquipoHerramienta>();
 
             GenerateCardModel();
             GenerateCardModelEqPrueba();
@@ -92,6 +101,23 @@ namespace CFEApp
                             InventarioID = item.InventarioID
                         };
                         CardDataCollection.Add(cardDataAprobaciones);
+                        ReactiveCommand.Create(() =>
+                        {
+                            var todo = new Herramientas() {
+                                Codigo = item.
+                            Codigo,
+                                Descripcion = item.
+                            Descripcion,
+                                DescUnidad = $"Unidad: {item.DescUnidad}",
+                                Cantidad = item.
+                            Cantidad,
+                                MInventarioEstadoID = item.MInventarioEstadoID,
+                                InventarioID = item.InventarioID
+                            };
+
+                            _DbHerramientas.CreateItem(todo);
+
+                        });
                     }
                 }
             }

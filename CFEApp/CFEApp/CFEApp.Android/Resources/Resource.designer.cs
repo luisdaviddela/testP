@@ -3224,6 +3224,7 @@ namespace CFEApp.Droid
 			global::BottomNavigationBar.Resource.Styleable.ViewStubCompat_android_id = global::CFEApp.Droid.Resource.Styleable.ViewStubCompat_android_id;
 			global::BottomNavigationBar.Resource.Styleable.ViewStubCompat_android_inflatedId = global::CFEApp.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId;
 			global::BottomNavigationBar.Resource.Styleable.ViewStubCompat_android_layout = global::CFEApp.Droid.Resource.Styleable.ViewStubCompat_android_layout;
+			global::Splat.Resource.String.library_name = global::CFEApp.Droid.Resource.String.library_name;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::CFEApp.Droid.Resource.Attribute.actionBarSize;
 			global::Zumero.Resource.Animation.abc_fade_in = global::CFEApp.Droid.Resource.Animation.abc_fade_in;
 			global::Zumero.Resource.Animation.abc_fade_out = global::CFEApp.Droid.Resource.Animation.abc_fade_out;

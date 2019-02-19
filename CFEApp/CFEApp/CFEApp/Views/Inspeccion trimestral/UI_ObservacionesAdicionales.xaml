@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Observaciones Adicionales"
+             x:Class="CFEApp.UI_ObservacionesAdicionales">
+    <ContentPage.Content>
+        <StackLayout Padding="15"
+                     Spacing="10">
+            <Label Text="Captura en este espacio las observaciones adicionales del presente informe trimestral" 
+                   FontAttributes="Italic"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Editor
+                    x:Name="ObsAdicion"
+                    TextChanged="Editor_TextChanged"
+                    />
+            </Grid>
+            <Grid
+                 Grid.Row="1"
+                 HorizontalOptions="Center"
+                 WidthRequest="200">
+                <Button
+                    x:Name="CancelarBtn"
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Clicked="CancelarBtn_Clicked"
+                    TextColor="White"
+                    BackgroundColor="#0C905F"
+                    Text="Cancelar"/>
+                <Button
+                    x:Name="FinalizarBtn"
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    TextColor="White"
+                    Clicked="FinalizarBtn_Clicked"
+                    BackgroundColor="#0C905F"
+                    Text="Finalizar"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
