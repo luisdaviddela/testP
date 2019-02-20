@@ -56,6 +56,10 @@ namespace CFEApp
             //-----------------------------
             _DbHerramientas = new ServiceHerramientaDB();
             _DbEqPruebas= new ServiceEqPruebasDB();
+            _DbHmenor = new ServiceHmenorDB();
+            _DbHmayor = new ServiceHmayor();
+            _DblineaSviva = new ServiceLineaSVivaDB();
+            _DbeqSeg = new ServiceEqSegDB();
             //-----------------------------
             CardDataCollection = new List<M_EquipoHerramienta>();
             CardDataCollectionEqPrueba = new List<M_EquipoHerramienta>();

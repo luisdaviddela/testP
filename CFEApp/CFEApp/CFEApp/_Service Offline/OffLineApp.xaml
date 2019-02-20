@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <bnb:BottomBarPage xmlns="http://xamarin.com/schemas/2014/forms" 
-                    xmlns:bnb="clr-namespace:BottomBar.XamarinForms;assembly=BottomBar.XamarinForms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                   xmlns:bnb="clr-namespace:BottomBar.XamarinForms;assembly=BottomBar.XamarinForms"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                   Title="Offline"
                    xmlns:view="clr-namespace:CFEApp"
                    x:Class="CFEApp.OffLineApp">
     <ContentPage Title="Herramientas" Icon="herramienta.png"

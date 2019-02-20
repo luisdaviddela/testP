@@ -112,7 +112,7 @@ namespace CFEApp
             else { /*Todos = new ReactiveList<EqPrueba>() { ChangeTrackingEnabled = true }; */}
             if (todoHmenor.Any())
             {
-                foreach (var item in todoeqprueba)
+                foreach (var item in todoHmenor)
                 {
                     var cardDataAprobaciones = new HMenor()
                     {
@@ -133,7 +133,7 @@ namespace CFEApp
 
             if (todoHayor.Any())
             {
-                foreach (var item in todoeqprueba)
+                foreach (var item in todoHayor)
                 {
                     var cardDataAprobaciones = new HMayor()
                     {
@@ -153,7 +153,7 @@ namespace CFEApp
             else { /*Todos = new ReactiveList<EqPrueba>() { ChangeTrackingEnabled = true }; */}
             if (todoLineaSviva.Any())
             {
-                foreach (var item in todoeqprueba)
+                foreach (var item in todoLineaSviva)
                 {
                     var cardDataAprobaciones = new LineaSViva()
                     {
@@ -172,9 +172,9 @@ namespace CFEApp
             }
             else { /*Todos = new ReactiveList<EqPrueba>() { ChangeTrackingEnabled = true }; */}
 
-            if (CardDataCollectionEqSeg.Any())
+            if (todoEqSeg.Any())
             {
-                foreach (var item in todoeqprueba)
+                foreach (var item in todoEqSeg)
                 {
                     var cardDataAprobaciones = new EqSeg()
                     {
