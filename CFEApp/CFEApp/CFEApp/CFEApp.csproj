@@ -48,7 +48,7 @@
     <EmbeddedResource Update="Views\Master\CustomMenuPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Service Offline\OffLineApp.xaml">
+    <EmbeddedResource Update="_Service Offline\OffLineApp.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

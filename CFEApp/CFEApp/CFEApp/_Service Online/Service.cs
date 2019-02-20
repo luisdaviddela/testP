@@ -2,7 +2,7 @@
 {
     public static class Service
     {
-        public static string Authority = "http://192.168.137.1/";
+        public static string Authority = "http://192.168.3.17/";
     }
     public static class HttpMethods
     {
